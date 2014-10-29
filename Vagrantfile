@@ -116,4 +116,8 @@ Vagrant.configure(2) do |config|
   # chef-validator, unless you changed the configuration.
   #
   #   chef.validation_client_name = "ORGNAME-validator"
+  config.vm.provision 'ansible' do |ansible|
+    ansible.playbook = 'ansible/site.yml'
+    ansible.sudo = true
+  end
 end

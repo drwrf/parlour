@@ -1,0 +1,5 @@
+- name: Install NodeJS
+  apt: pkg=node state=installed
+
+- name: Install NPM
+  apt: pkg=npm state=installed
